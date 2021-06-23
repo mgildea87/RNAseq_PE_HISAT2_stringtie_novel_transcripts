@@ -1,0 +1,3 @@
+File_Name_R1	File_Name_R2	Sample	Condition	Replicate	Sample_name
+SG001_Kanter01_ND-1_RNA_Lib1_S1_R1_001.fastq.gz	SG001_Kanter01_ND-1_RNA_Lib1_S1_R2_001.fastq.gz	sample_1	ND	1	sample_1_ND_1
+SG002_Kanter01_ND-2_RNA_Lib1_S2_R1_001.fastq.gz	SG002_Kanter01_ND-2_RNA_Lib1_S2_R2_001.fastq.gz	sample_2	ND	2	sample_2_ND_2

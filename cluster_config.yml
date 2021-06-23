@@ -1,0 +1,64 @@
+# cluster configuration
+fastqc:
+  Job_name: Fastqc # -J
+  Mem: 50000 # --mem
+  Cores: 1 #-c
+  Partition: cpu_short # -p
+  Time: 240 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
+
+trim:
+  Job_name: trim # -J
+  Mem: 50000 # --mem
+  Partition: cpu_short # -p
+  Cores: 4 #-c
+  Time: 240 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
+
+align:
+  Job_name: align # -J
+  Mem: 50000 # --mem
+  Partition: cpu_short # -p
+  Cores: 10 #-c
+  Time: 240 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
+
+count:
+  Job_name: count # -J
+  Mem: 50000 # --mem
+  Partition: cpu_short # -p
+  Cores: 10 #-c
+  Time: 240 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
+
+combine_gtf:
+  Job_name: combine_gtf # -J
+  Mem: 5000 # --mem
+  Partition: cpu_short # -p
+  Cores: 1 #-c
+  Time: 1:00:00 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
+
+merge:
+  Job_name: merge # -J
+  Mem: 5000 # --mem
+  Partition: cpu_short # -p
+  Cores: 1 #-c
+  Time: 60 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
+
+count_2:
+  Job_name: count_2 # -J
+  Mem: 50000 # --mem
+  Partition: cpu_short # -p
+  Cores: 10 #-c
+  Time: 240 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
+
+deseq_prep:
+  Job_name: deseq_prep # -J
+  Mem: 50000 # --mem
+  Partition: cpu_short # -p
+  Cores: 10 #-c
+  Time: 60 # -t
+  Error: logs/slurm_reports/slurm-%j.out # -e
