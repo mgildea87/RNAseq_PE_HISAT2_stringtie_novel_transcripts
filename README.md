@@ -1,6 +1,6 @@
 # RNAseq_PE_HISAT2_stringtie
 This readme describes how to execute the snake make workflow for paired-end RNA-seq pre-processing (fastq -> feature counting) utilizing HISAT2 and Stringtie for alignment and gene/transcript
-level counting. This version of the pipeline does not find novel transcripts.
+level counting. This version of the pipeline allows stringtie to assemble novel transcript isoforms.
 
 # Description of files required for snakemake:
 
@@ -40,7 +40,7 @@ This file contains the environment info used by this pipeline.
 ## Usage
 When starting a new project:
 
-		1. Clone the git repo using 'git clone https://github.com/mgildea87/RNAseq_PE_HISAT2_stringtie.git'
+		1. Clone the git repo using 'git clone https://github.com/mgildea87/RNAseq_PE_HISAT2_stringtie_novel_transcripts.git'
 		2. Make a fastq/ directory in the new project directory
 		3. Copy the fastq.gz files into fastq/ 
 		4. Update the samples_info.tab file with fastq.gz file names and desired sample, condition, and replicate names
