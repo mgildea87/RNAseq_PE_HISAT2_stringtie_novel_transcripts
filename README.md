@@ -32,9 +32,9 @@ Sbatch parameters for each rule in the Snakefile workflow.
 This bash script:
 
 		1. loads the miniconda3/cpu/4.9.2 module
-		2. Loads the conda environment (/gpfs/data/fisherlab/conda_envs/RNAseq). You can clone the conda environment using the RNAseq_PE.yml file and modify this bash script to load the env.
+		2. Loads the conda environment (/gpfs/data/fisherlab/conda_envs/RNAseq). You can clone the conda environment using the RNAseq.yml file and modify this bash script to load the env.
 		3. Executes snakemake
-## RNAseq_PE_HISAT2_stringtie.yml
+## RNAseq.yml
 This file contains the environment info used by this pipeline. 
 
 ## Usage
@@ -47,7 +47,7 @@ When starting a new project:
 		5. Update config.yaml with path to genome and feature file (if needed. The default right now is mm10)
 		6. Update cluster_config.yml with job desired specifications for each Snakemake rule, if desired.
 		7. Perform a dry run of snakemake with 'snakemake -n -r' to check for errors and this will tell you the number of jobs required. You will need to load the miniconda3/cpu/4.9.2 module and activate the RNAseq environment first. Dont forget to deactivate the environment and miniconda module before running snakemake_init.sh. This step is not necessary.
-		8. Run 'bash cat_rename_init/snakemake_init.sh' to execute workflow.
+		8. Run "bash cat_rename_init/snakemake_init.sh -c 'RNAseq' -w 'RNAseq_PE_HISAT2_stringtie'" to execute workflow. The -c and -w parameters tell the workflow which conda env to use and which workflow is being executed.
 		9. There are several parameters within stringtie that may need to be altered
 			-Read length (def = 65) in the prepDE.py script. This script creates a gene and transcript level count matrix for use in DESeq and requires read length to calculate raw read counts
 			-This software is new to me so there are things im likely not thinking of.
