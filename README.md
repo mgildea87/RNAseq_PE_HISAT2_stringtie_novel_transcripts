@@ -1,4 +1,4 @@
-# RNAseq_PE_HISAT2_stringtie
+# RNAseq_PE_HISAT2_stringtie_novel_transcripts
 This readme describes how to execute the snake make workflow for paired-end RNA-seq pre-processing (fastq -> feature counting) utilizing HISAT2 and Stringtie for alignment and gene/transcript
 level counting. This version of the pipeline allows stringtie to assemble novel transcript isoforms.
 
@@ -47,7 +47,7 @@ When starting a new project:
 		5. Update config.yaml with path to genome and feature file (if needed. The default right now is mm10)
 		6. Update cluster_config.yml with job desired specifications for each Snakemake rule, if desired.
 		7. Perform a dry run of snakemake with 'snakemake -n -r' to check for errors and this will tell you the number of jobs required. You will need to load the miniconda3/cpu/4.9.2 module and activate the RNAseq environment first. Dont forget to deactivate the environment and miniconda module before running snakemake_init.sh. This step is not necessary.
-		8. Run "bash cat_rename_init/snakemake_init.sh -c 'RNAseq' -w 'RNAseq_PE_HISAT2_stringtie'" to execute workflow. The -c and -w parameters tell the workflow which conda env to use and which workflow is being executed.
+		8. Run "bash cat_rename_init/snakemake_init.sh -c 'RNAseq' -w 'RNAseq_PE_HISAT2_stringtie_novel_transcripts'" to execute workflow. The -c and -w parameters tell the workflow which conda env to use and which workflow is being executed.
 		9. There are several parameters within stringtie that may need to be altered
 			-Read length (def = 65) in the prepDE.py script. This script creates a gene and transcript level count matrix for use in DESeq and requires read length to calculate raw read counts
 			-This software is new to me so there are things im likely not thinking of.
