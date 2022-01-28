@@ -8,11 +8,12 @@ for directory in ['fastqc', 'trim', 'logs', 'logs/slurm_reports', 'logs/trim_rep
 configfile: "config.yaml"
 sample_file = config["sample_file"]
 GTF = config["GTF"]
-sample = pd.read_table(sample_file)['Sample']
-replicate = pd.read_table(sample_file)['Replicate']
-condition = pd.read_table(sample_file)['Condition']
-File_R1 = pd.read_table(sample_file)['File_Name_R1']
-File_R2 = pd.read_table(sample_file)['File_Name_R2']
+table = pd.read_table(sample_file)
+sample = table['Sample']
+replicate = table['Replicate']
+condition = table['Condition']
+File_R1 = table['File_Name_R1']
+File_R2 = table['File_Name_R2']
 File_names = File_R1.append(File_R2)
 genome = config["genome"]
 
